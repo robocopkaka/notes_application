@@ -22,4 +22,14 @@ class NotesApplication{
 		}// end if
 		else console.log("ID is invalid");
 	}// end of get
+
+	edit(note_id, new_content){
+		if(this.notes.hasOwnProperty(note_id)) this.notes[note_id] = new_content;
+		else console.log("ID is invalid");
+	}// end of edit
+	
+	delete(note_id){
+		if(this.notes.hasOwnProperty(note_id)) this.notes[note_id] = "";
+		else console.log("ID is invalid");
+	}//end of delete
 }
